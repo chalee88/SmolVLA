@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Checkpoints, models, outputs (do not commit multi-gigabyte weights to GitHub)
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+outputs/
+checkpoints/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Logs & Monitoring
+wandb/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

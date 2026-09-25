@@ -1,0 +1,10 @@
+torch>=2.2.0
+torchvision
+transformers>=4.48.0
+accelerate>=0.28.0
+datasets>=2.19.0
+huggingface_hub>=0.24.0
+Pillow>=10.0.0
+num2words>=0.5.14
+av>=11.0.0
+lerobot>=0.4.0

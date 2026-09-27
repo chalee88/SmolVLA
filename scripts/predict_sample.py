@@ -5,10 +5,22 @@ Loads a dataset sample from 'lerobot/svla_so100_pickplace', maps the camera view
 and generates real 6-DoF robot motor actions on CPU or GPU.
 """
 
+import sys
+from pathlib import Path
 import torch
+
+# Ensure local smolvla package can be loaded directly from the repository
+repo_root = Path(__file__).resolve().parent.parent
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
+
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
-from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
-from lerobot.policies.smolvla.processor_smolvla import make_smolvla_pre_post_processors
+
+try:
+    from smolvla import SmolVLAPolicy, make_smolvla_pre_post_processors
+except ImportError:
+    from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
+    from lerobot.policies.smolvla.processor_smolvla import make_smolvla_pre_post_processors
 
 
 def predict(

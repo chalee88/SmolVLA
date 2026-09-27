@@ -32,6 +32,14 @@ A compact, reproducible repository for training, inspecting, and deploying **Smo
 
 ```
 SmolVLA/
+├── smolvla/                           # Core SmolVLA policy implementation
+│   ├── configuration_smolvla.py       # Configuration and hyperparameter definitions
+│   ├── modeling_smolvla.py            # SmolVLAPolicy neural network architecture
+│   ├── processor_smolvla.py           # Pre/post-processing pipelines
+│   └── smolvlm_with_expert.py         # SmolVLM vision backbone + action expert
+├── common/                            # Flow matching & VLA utilities
+│   ├── flow_matching.py               # Euler integration & beta time sampling
+│   └── vla_utils.py                   # Sinusoidal embeddings & attention masks
 ├── assets/
 │   └── sample_visualization.png       # Annotated dual-camera visual sample
 ├── notebooks/

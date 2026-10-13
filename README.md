@@ -43,7 +43,8 @@ SmolVLA/
 ├── assets/
 │   └── sample_visualization.png       # Annotated dual-camera visual sample
 ├── notebooks/
-│   └── smolvla_so100_finetuning.ipynb # Complete Google Colab fine-tuning pipeline
+│   ├── smolvla_so100_finetuning.ipynb # Complete Google Colab fine-tuning pipeline (SO-100)
+│   └── smolvla_libero_benchmark.ipynb # Full 34k-step training & LIBERO-10 simulation eval
 ├── scripts/
 │   ├── inspect_dataset.py             # Inspect feature shapes, episode counts, and task labels
 │   ├── visualize_sample.py            # Stitch & annotate dual camera frames with joint angles
